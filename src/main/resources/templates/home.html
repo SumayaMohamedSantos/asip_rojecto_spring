@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            text-align: center;
+            padding-top: 50px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 40px;
+        }
+        p a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #007BFF;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        p a:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Home Page</h1>
+    <p>
+        <a th:href="@{/registration}">Register</a> | 
+        <a th:href="@{/loginPage}">Login</a>
+    </p>
+</body>
+</html>
