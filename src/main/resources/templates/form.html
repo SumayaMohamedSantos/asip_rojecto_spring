@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Formulário</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/scripts.js" defer></script>
+</head>
+<body>
+<div class="form-container">
+    <h1 class="form-title">Welcome, <span th:text="${username}"></span>!</h1>
+    <p>Fez login com sucesso!</p>
+    <p><a th:href="@{/}">Logout</a></p>
+</div>
+</body>
+</html>

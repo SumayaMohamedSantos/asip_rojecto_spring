@@ -2,109 +2,25 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Login Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #e9ecef;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 20px;
-        }
-        .error {
-            color: red;
-            text-align: center;
-            margin-bottom: 15px;
-        }
-        form {
-            background-color: #fff;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 350px;
-        }
-        div {
-            margin-bottom: 15px;
-        }
-        label {
-            font-weight: bold;
-            display: block;
-            margin-bottom: 5px;
-        }
-        input[type="text"],
-        input[type="password"] {
-            width: 100%;
-            padding: 8px 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-        button {
-            background-color: #28a745;
-            color: #fff;
-            padding: 12px;
-            width: 100%;
-            border: none;
-            border-radius: 4px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #218838;
-        }
-        p {
-            text-align: center;
-            margin-top: 15px;
-        }
-        p a {
-            text-decoration: none;
-            color: #007BFF;
-        }
-        p a:hover {
-            text-decoration: underline;
-        }
-    </style>
-	
-	<script>
-		function controla(){
-			let usr= document.getElementById("username").value;
-			let pass= document.getElementById("password").value;
-			
-			if (usr === "admin" && pass === "admin"){
-				open("http://localhost:8081/admin")
-				document.getElementById("username").value ="";
-				document.getElementById("password").value= "";
-				return false;
-			}
-			else{
-				return true;
-			}
-		}
-		
-
-	</script>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/scripts.js" defer></script>
 </head>
-<body>
-    <form th:action="@{/login}" method="post" onsubmit="return controla()" >
-        <h1>Login</h1>
-        <div th:if="${error}" class="error">
-            <p th:text="${error}"></p>
-        </div>
-        <div>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required />
-        </div>
-        <div>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required />
-        </div>
-        <button type="submit">Login</button>
-        <p><a th:href="@{/}">Back to Home</a></p>
-    </form>
+<body class="login">
+<form th:action="@{/login}" method="post" onsubmit="return controla()">
+    <h1>Login</h1>
+    <div th:if="${error}" class="error">
+        <p th:text="${error}"></p>
+    </div>
+    <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+    </div>
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+    </div>
+    <button type="submit">Entrar</button>
+    <p><a th:href="@{/}">Voltar</a></p>
+</form>
 </body>
 </html>

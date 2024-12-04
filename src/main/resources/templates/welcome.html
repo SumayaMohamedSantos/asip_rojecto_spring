@@ -1,59 +1,21 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-   
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Formulário</title>
-	<!-- Bootstrap CSS -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-	<style>
-
-		
-	    body {
-	        background-color: #f8f9fa;
-	        font-family: Arial, sans-serif;
-	    }
-	    .form-container {
-	        max-width: 500px;
-	        margin: 50px auto;
-	        padding: 20px;
-	        background: #fff;
-	        border-radius: 8px;
-	        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-	    }
-	    .form-title {
-	        text-align: center;
-	        margin-bottom: 20px;
-	        color: #343a40;
-	    }
-
-	    img{
-	        width: 3cm;
-	        height: 3cm; 
-	        display: block; 
-	        margin-left: auto; 
-	        margin-right: auto;
-	    }
-	</style>
-	
-
-	
-	
+	<title>Pagina Cliente</title>
+	<link href="/static/styles.css" rel="stylesheet">
 </head>
-<body>
-	<!--<script>
-		alert("welcome" + "${username}")
-	</script>-->
-    <h1>Welcome, <span th:text="${username}"></span>!</h1>
-    <p>You have successfully logged in.</p> 
-    <p><a th:href="@{/}">Logout</a></p>
-	
-	
-	
+<body class="welcome-page">
+<h1>Welcome, <span th:text="${username}"></span>!</h1>
+<p>:Perfil:</p>
+<ul>
+	<li>Nome: <span th:text="${name}"></span></li>
+	<li>Username: <span th:text="${username}"></span></li>
+	<li>Data de Nascimento: <span th:text="${dob}"></span></li>
+</ul>
 
-	
-	
-	
+<p>O Cliente Fez o login com sucesso.</p>
+<p><a th:href="@{/}">Logout</a></p>
 </body>
 </html>
