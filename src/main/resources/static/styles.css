@@ -1,0 +1,201 @@
+/* Estilo para todas as páginas */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para Home Page */
+body.home {
+    background-color: #f0f2f5;
+    text-align: center;
+    padding-top: 50px;
+}
+body.home h1 {
+    color: #333;
+    margin-bottom: 40px;
+}
+body.home p a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 18px;
+    font-weight: bold;
+}
+body.home p a:hover {
+    color: #0056b3;
+}
+
+/* Estilo para Login e Registration Pages */
+body.login,
+body.registration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+body.login h1,
+body.registration h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+form {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+}
+form.registration {
+    width: 400px;
+}
+div {
+    margin-bottom: 15px;
+}
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+input[type="text"],
+input[type="password"],
+input[type="date"] {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
+}
+p {
+    text-align: center;
+    margin-top: 15px;
+}
+p a {
+    text-decoration: none;
+    color: #007BFF;
+}
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para Form Page */
+.form-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.form-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #343a40;
+}
+img {
+    width: 3cm;
+    height: 3cm;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilo geral para a página de administração */
+body.admin-page {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    min-height: 100vh;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilo para a tabela */
+.content-table {
+    border-collapse: collapse;
+    margin: 20px auto;
+    font-size: 1em;
+    min-width: 600px; /* Ajuste a largura mínima da tabela */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-table thead tr {
+    background-color: #007bff;
+    color: #fff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+    padding: 12px 15px;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+    background-color: #f9f9f9;
+}
+
+.content-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #007bff;
+}
+
+/* Estilo para o botão de exclusão */
+button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #c82333;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+

@@ -1,8 +1,39 @@
-<html>
-	<head>
-		
-	</head>
-	<body>
-		<h1>Logged as Admin!!</h1>
-	</body>
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Admin Page</title>
+	<link rel="stylesheet" href="/styles.css">
+</head>
+<body class="admin-page">
+<h1>Admin Panel</h1>
+
+<table class="content-table">
+	<thead>
+	<tr>
+		<th>ID</th>
+		<th>Nome</th>
+		<th>Username</th>
+		<th>Data de Nascimento</th>
+		<th>Acção</th>
+	</tr>
+	</thead>
+	<tbody>
+	<!-- Exemplo de iteração sobre os usuários -->
+	<tr th:each="user : ${users}">
+		<td th:text="${user.userId}"></td>
+		<td th:text="${user.name}"></td>
+		<td th:text="${user.username}"></td>
+		<td th:text="${user.dob}"></td>
+		<td>
+			<form th:action="@{/deleteUser}" method="post">
+				<input type="hidden" name="userId" th:value="${user.userId}" />
+				<button type="submit">Apagar</button>
+			</form>
+		</td>
+	</tr>
+	</tbody>
+</table>
+
+<p><a th:href="@{/}">Logout</a></p>
+</body>
 </html>
